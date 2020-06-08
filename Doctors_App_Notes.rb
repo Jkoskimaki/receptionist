@@ -7,6 +7,6 @@
 
 # You will create a rails application that manages a user's doctor appointments. A user will have many doctors through appointments. You will be experimenting with advanced relationships in your models using has_many through associations.
 
-gem 'pry'
-gem 'faker'
-gem 'semantic-ui-sass'
+# gem 'pry'
+# gem 'faker'
+# gem 'semantic-ui-sass'
