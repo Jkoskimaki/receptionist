@@ -5,3 +5,26 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+apptypes = ['eye', 'radiology', 'surgery']
+10.times do
+  doctor = Doctor.create(
+    first_name: Faker::Movies::StarWars.planet,
+    last_name: Faker::Books::Dune.planet,
+    specialty: Faker::Movies::StarWars.call_number 
+  )
+
+  5.times do
+    patient = Patient.create(
+      first_name: Faker::TvShows::RickAndMorty.character, 
+      last_name: Faker::Games::Zelda.character
+    )
+
+    Appointment.create(
+      apptype: apptypes.sample,
+      doctor_id: doctor.id,
+      patient_id: patient.id 
+    )
+  end
+end
+puts 'data seeded'
