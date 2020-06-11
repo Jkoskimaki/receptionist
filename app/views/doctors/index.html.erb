@@ -5,7 +5,7 @@
 <ul>
   <% @doctors.each do |doctor| %>
     <li>
-      <%= link_to doctor.first_name, doctor %>
+      <%= link_to doctor.doc_info, doctor %>
 
     </li>
   <% end %>

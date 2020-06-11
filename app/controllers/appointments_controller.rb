@@ -12,13 +12,13 @@ class AppointmentsController < ApplicationController
   def new
     @patients = Patient.all - @doctor.patients
     #Variable for users not in this course
-    @appointment = @patient.appointments.new
+    @appointment = @doctor.appointments.new
   end
 
   def create
     @appointment = @doctor.appointments.new(appointment_params)
     if @appointment.save
-      redirect_to patient_appointments_path(@doctor)
+      redirect_to doctor_appointments_path(@doctor)
       #Redirects back to index path here
     else
       render :new

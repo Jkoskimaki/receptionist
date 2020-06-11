@@ -1,4 +1,6 @@
 <h1><%= @doctor.first_name %></h1>
 <%= link_to 'Appointments', doctor_appointments_path(@doctor) %>
 <br />
+<%= link_to 'Add Appointments', @doctor, method: :delete, class: 'ui gray button' %>
+<br />
 <%= link_to 'Delete Appointments', @doctor, method: :delete, class: 'ui red button' %>

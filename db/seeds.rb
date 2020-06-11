@@ -22,8 +22,6 @@ apptypes = ['eye', 'radiology', 'surgery']
 
     Appointment.create(
       apptype: apptypes.sample,
-      date:
-      time: 
       doctor_id: doctor.id,
       patient_id: patient.id 
     )
