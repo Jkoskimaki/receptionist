@@ -1,4 +1,4 @@
-<h1>New Doctor</h1>
+<h1>Add New Doctor</h1>
 
 <%= form_with(model: @doctor, local: true, class: "ui form" ) do |f| %>
 
@@ -13,9 +13,8 @@
   </div>
 
   <div class="field">
-  <%= f.label :specialty %>
-  <%= f.text_field :last_name, required: true %>
-
-</div>
+    <%= f.label :specialty %>
+    <%= f.text_field :specialty, required: true %>
+  </div>
   <%= f.submit nil, class: 'ui green button' %>
 <% end %>

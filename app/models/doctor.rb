@@ -4,11 +4,7 @@ class Doctor < ApplicationRecord
   validates :first_name, :last_name, :specialty, presence: true
 
   def doc_info
-    "#{self.first_name} 
-    \n
-    #{self.last_name} 
-    \n
-    #{self.specialty}"
+    "#{self.first_name} #{self.last_name} -#{self.specialty}"
 
   end
 

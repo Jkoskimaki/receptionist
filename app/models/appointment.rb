@@ -4,10 +4,6 @@ class Appointment < ApplicationRecord
   validates :date, :time, :apptype, presence: true
 
   def patient_info
-    "#{self.date}"
-    "\n"
-    "#{self.time}"
-    "\n"
-    "#{self.apptype}"
+    "#{self.date} #{self.time} #{self.apptype}"
   end
 end
