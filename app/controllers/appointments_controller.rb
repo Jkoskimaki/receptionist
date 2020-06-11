@@ -2,6 +2,7 @@ class AppointmentsController < ApplicationController
   before_action :set_doctor
 
   def index
+    # @appointments = Appointment.all
     @eye = @doctor.appointments.where(apptype: 'eye')
     @radiology = @doctor.appointments.where(apptype: 'radiology')
     @surgery = @doctor.appointments.where(apptype: 'surgery')

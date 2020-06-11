@@ -7,14 +7,14 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 apptypes = ['eye', 'radiology', 'surgery']
-10.times do
+2.times do
   doctor = Doctor.create(
     first_name: Faker::Movies::StarWars.planet,
     last_name: Faker::Books::Dune.planet,
     specialty: Faker::Movies::StarWars.call_number 
   )
 
-  5.times do
+  1.times do
     patient = Patient.create(
       first_name: Faker::TvShows::RickAndMorty.character, 
       last_name: Faker::Games::Zelda.character
@@ -22,6 +22,8 @@ apptypes = ['eye', 'radiology', 'surgery']
 
     Appointment.create(
       apptype: apptypes.sample,
+      date:
+      time: 
       doctor_id: doctor.id,
       patient_id: patient.id 
     )

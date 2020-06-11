@@ -1,5 +1,14 @@
-<h1>Patients</h1>
-# <h1><%= @patient.first_name %></h1>
-# <%= link_to 'Appointments', patients_path(@patient) %>
-# <br />
-# <%= link_to 'Delete Appointments', @patient, method: :delete, class: 'ui blue button' %>
+<h1><%= @patient.full_name %></h1>
+<hr >
+<h2>Patient Appointments</h2>
+<ul>
+  <% @patient.appointments.each do |appointment| %>
+    <li>
+      <%= link_to appointment.patient_info, appointment %>
+    </li>
+  <% end %>
+</ul>
+<br />
+<br />
+<br />
+<%= link_to 'Delete Patient', @patient, method: :delete, class: 'ui red buttom' %>
